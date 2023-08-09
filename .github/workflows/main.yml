@@ -48,6 +48,7 @@ jobs:
 
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
+        shell: bash
         env:
           image_tag: latest
         run: |
