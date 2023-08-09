@@ -50,9 +50,7 @@ jobs:
         id: build-image
         env:
           image_tag: latest
-         run: |
-           # Build a docker container and
-           # push it to ECR so that it can
-           # be deployed to ECS.
-          docker buildx build --tag ${{ secrets.AWS_ECR_REPO_URI }}:$image_tag Dockerfile
-          docker push ${{ secrets.AWS_ECR_REPO_URI }}:$image_tag
+        run: |
+          # Build a docker container and
+          # push it to ECR so that it can
+          # be deployed to ECS.
